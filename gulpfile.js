@@ -24,7 +24,7 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('images', () => {
-  return gulp.src(['src/img/*'], {base: 'src', since: gulp.lastRun('images')})
+  return gulp.src(['src/img/*'], {base: 'src'})
     .pipe(imagemin())
     .pipe(gulp.dest(resultFolder));
 })
