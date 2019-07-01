@@ -17,6 +17,7 @@
       <a href="#" class="header__link">преимущества</a>
       <a href="#" class="header__link">дополнительно</a>
       <a href="#" class="header__link black">купить</a>
+      <span class="header__target"></span>
     </menu>
   </div>
 </header>
@@ -53,6 +54,6 @@
     </div>
   </div>
 </main>
-
+<script src="js/main.js"></script>
 </body>
 </html>
