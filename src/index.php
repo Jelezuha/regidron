@@ -24,7 +24,7 @@
 
 <main class="wrapper content" role="main">
   <figure class="content__left">
-    <img src="img/medicine.jpg" alt="" class="content__img">
+    <img src="" alt="" class="content__img lazy-img" data-src="img/medicine.jpg">
     <figcaption class="content__caption">
       <span class="black">Регидрон Био</span> – современное комбинированное средство <span class="black">для детей от трёх лет</span>
       или с массой тела от 12 кг, для устранения и профилактики <br>
