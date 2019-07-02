@@ -1,22 +1,23 @@
+<?php include 'data.php'; ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>РЕГИДРОН БИО</title>
+  <title><?php echo $title ?></title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <header class="header">
   <div class="wrapper flex header__wrap">
-    <a href="#" class="logo">РЕГИДРОН БИО</a>
+    <a href="#" class="logo"><?php echo $title ?></a>
     <menu class="flex header__menu">
-      <a href="#" class="header__link">причины</a>
-      <a href="#" class="header__link">помощь</a>
-      <a href="#" class="header__link">применение</a>
-      <a href="#" class="header__link">преимущества</a>
-      <a href="#" class="header__link">дополнительно</a>
-      <a href="#" class="header__link black">купить</a>
+        <?php
+          foreach ($menu as $item) {
+              echo "<a href='".$item['link']."' class='header__link ".$item['class']."'>".$item['text']."</a>";
+          }
+        ?>
       <span class="header__target"></span>
     </menu>
   </div>
@@ -26,31 +27,20 @@
   <figure class="content__left">
     <img src="" alt="" class="content__img lazy-img animate" data-src="img/medicine.jpg">
     <figcaption class="content__caption">
-      <span class="black">Регидрон Био</span> – современное комбинированное средство <span class="black">для детей от трёх лет</span>
-      или с массой тела от 12 кг, для устранения и профилактики <br>
-      обезвоживания и облегчения диареи и рвоты
+      <span class="black"><?php echo $title ?></span> – <?php echo $medicine_descripton ?>
     </figcaption>
   </figure>
   <div class="content__right">
     <div class="content__head animate">
-      <h1 class="content__title">
-        комплексное решение
-        при детской диарее
-      </h1>
-      <div>гипоосмолярный глюкозо-солевой раствор
-        + лактобактерии LGG</div>
+      <h1 class="content__title"><?php echo $h1 ?></h1>
+      <div><?php echo $h1_description ?></div>
     </div>
     <div class="content__list animate">
-      <div class="content__li">
-        сокращает
-        продолжительность
-        и выраженность диареи
-      </div>
-      <div class="content__li">
-        восстанавливает <br>
-        водно-солевой
-        баланс
-      </div>
+        <?php
+          foreach ($advantages as $item) {
+              echo "<div class='content__li'>" . $item . "</div>";
+          }
+        ?>
     </div>
   </div>
 </main>
