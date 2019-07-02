@@ -3,7 +3,7 @@
   var target = document.querySelector(".header__target");
   var links = document.querySelectorAll(".header__link");
 
-  function mouseenterFunc() {
+  function mouseenterFunc () {
     if (!this.classList.contains("active")) {
       for (var i = 0; i < links.length; i++) {
         if (links[i].classList.contains("active")) {
