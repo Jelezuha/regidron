@@ -9,6 +9,8 @@
   position: relative
   &__wrap
     height: 100%
+  &__burger
+    display: none
   &__menu
     position: relative
   &__link
@@ -60,16 +62,32 @@
       right: 0
       top: 100%
       flex-direction: column
-      z-index: 999
       align-items: flex-end
       padding: 10px 0
       background: #fff
       box-shadow: rgba(0, 0, 0, 0.1) -5px 5px 5px
+      opacity: 0
+      z-index: -1
+      transition: 0.3s
+      &:hover
+        opacity: 1
+        z-index: 999
     &__link
       margin: 0
       padding: 10px 15px
       justify-content: flex-end
-      &:hover, &.active
+      &:hover
         background: $yellow
     &__target
       display: none
+    &__burger
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      text-transform: uppercase
+      font-weight: 600
+      cursor: pointer
+      &:hover + .header__menu
+        opacity: 1
+        z-index: 999

@@ -12,6 +12,9 @@
 <header class="header">
   <div class="wrapper flex header__wrap">
     <a href="#" class="logo"><?php echo $title ?></a>
+    <div class="header__burger">
+      Меню
+    </div>
     <menu class="flex header__menu">
         <?php
           foreach ($menu as $item) {
