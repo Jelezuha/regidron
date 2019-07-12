@@ -2,6 +2,14 @@
 
 @import "settings/vars"
 
+@keyframes show
+  0%
+    opacity: 0
+    transform: translateY(-50px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
 .content
   display: flex
   justify-content: space-between
@@ -51,15 +59,14 @@
     &:last-child:before
       @include size(103px, 142px)
       background-position: -6px -116px
-
-  .animate
-    opacity: 0
-    transform: translateY(-50px)
-
-  .animated
-    transition: 0.5s
-    opacity: 1
-    transform: translateY(0)
+  &__img
+    animation: show 0.5s ease-in
+  &__head
+    animation: show 0s linear backwards, show 0.5s ease-in
+    animation-delay: 0.4s
+  &__list
+    animation: show 0s linear backwards, show 0.5s ease-in
+    animation-delay: 0.8s
 
 @media (max-width: 1635px)
   .content

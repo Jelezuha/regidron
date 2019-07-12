@@ -26,19 +26,19 @@
   </div>
 </header>
 
-<main class="wrapper content" role="main">
+<main class="wrapper content">
   <figure class="content__left">
-    <img src="" alt="" class="content__img lazy-img animate" data-src="img/medicine.jpg">
+    <img src="img/medicine.jpg" alt="" class="content__img">
     <figcaption class="content__caption">
       <span class="black"><?php echo $title ?></span> – <?php echo $medicine_descripton ?>
     </figcaption>
   </figure>
   <div class="content__right">
-    <div class="content__head animate">
+    <div class="content__head">
       <h1 class="content__title"><?php echo $h1 ?></h1>
       <div><?php echo $h1_description ?></div>
     </div>
-    <div class="content__list animate">
+    <div class="content__list">
         <?php
           foreach ($advantages as $item) {
               echo "<div class='content__li'>" . $item . "</div>";
