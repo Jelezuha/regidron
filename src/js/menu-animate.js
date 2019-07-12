@@ -12,10 +12,8 @@
       }
       this.classList.add("active");
       var menuLeft = document.querySelectorAll(".header__menu")[0].getBoundingClientRect().left;
-      var width = this.getBoundingClientRect().width;
-      var left = this.getBoundingClientRect().left - menuLeft;
-      target.style.width = width + 'px';
-      target.style.left = left + 'px';
+      target.style.width = this.getBoundingClientRect().width + 'px';
+      target.style.left = this.getBoundingClientRect().left - menuLeft + 'px';
     }
   }
 
@@ -23,5 +21,5 @@
     links[i].addEventListener("mouseenter", mouseenterFunc);
   }
 
-  document.addEventListener("DOMContentLoaded", mouseenterFunc.bind(document.querySelectorAll(".header__link")[0]));
+  document.addEventListener("DOMContentLoaded", mouseenterFunc.bind(document.querySelector(".header__link")));
 })();

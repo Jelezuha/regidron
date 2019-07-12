@@ -17,7 +17,7 @@
 
     function nextImg () {
       if (document.images[j+1]) {
-        j += 1;
+        ++j;
         loadImg();
       }
     }
