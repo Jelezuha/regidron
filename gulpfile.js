@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin')
 const uglify = require('gulp-uglify')
 const gulpIf = require('gulp-if')
 const del = require('del')
+const htmlValidator = require('gulp-w3c-html-validator')
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const resultFolder = 'dist'
@@ -51,6 +52,12 @@ gulp.task('js', () => {
 gulp.task('php', () => {
   return gulp.src(['src/*.php'])
     .pipe(gulp.dest(resultFolder));
+})
+
+gulp.task('validate-php', () => {
+  return gulp.src('src/index.php')
+    .pipe(htmlValidator())
+    .pipe(htmlValidator.reporter());
 })
 
 gulp.task('clean', () => {

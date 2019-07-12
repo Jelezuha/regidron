@@ -6,7 +6,7 @@
 
   function mouseenterFunc () {
       target.style.width = this.getBoundingClientRect().width + 'px';
-      target.style.left = this.getBoundingClientRect().left - menu.getBoundingClientRect().left + 'px';
+      target.style.left = this.getBoundingClientRect().left + 'px';
       target.style.opacity = 1;
   }
 

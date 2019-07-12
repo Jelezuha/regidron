@@ -18,11 +18,11 @@
     <menu class="flex header__menu">
         <?php
           foreach ($menu as $item) {
-              echo "<a href='".$item['link']."' class='header__link ".$item['class']."'>".$item['text']."</a>";
+              echo "<li class='header__li'><a href='".$item['link']."' class='header__link ".$item['class']."'>".$item['text']."</a></li>";
           }
         ?>
-      <span class="header__target"></span>
     </menu>
+    <span class="header__target"></span>
   </div>
 </header>
 
