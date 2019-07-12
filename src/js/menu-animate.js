@@ -1,25 +1,21 @@
 (function() {
 
-  var target = document.querySelector(".header__target");
-  var links = document.querySelectorAll(".header__link");
+  var target = document.querySelector(".header__target"),
+      links = document.querySelectorAll(".header__link"),
+      menu = document.querySelector(".header__menu");
 
   function mouseenterFunc () {
-    if (!this.classList.contains("active")) {
-      for (var i = 0; i < links.length; i++) {
-        if (links[i].classList.contains("active")) {
-          links[i].classList.remove("active");
-        }
-      }
-      this.classList.add("active");
-      var menuLeft = document.querySelectorAll(".header__menu")[0].getBoundingClientRect().left;
       target.style.width = this.getBoundingClientRect().width + 'px';
-      target.style.left = this.getBoundingClientRect().left - menuLeft + 'px';
-    }
+      target.style.left = this.getBoundingClientRect().left - menu.getBoundingClientRect().left + 'px';
+      target.style.opacity = 1;
   }
 
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("mouseenter", mouseenterFunc);
   }
 
-  document.addEventListener("DOMContentLoaded", mouseenterFunc.bind(document.querySelector(".header__link")));
+  menu.addEventListener("mouseout", function () {
+    target.style.opacity = 0;
+  });
+
 })();
