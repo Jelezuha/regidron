@@ -6,7 +6,6 @@
   height: 124px
   background: $yellow
   width: 100%
-  overflow: hidden
   position: relative
   &__wrap
     height: 100%
@@ -37,3 +36,40 @@
     background: #fff
     display: block
     transition: 0.4s
+
+@media (max-width: 1800px)
+  .header
+    height: 80px
+    &__wrap
+      justify-content: space-between
+    &__link
+      font-size: 16px
+      margin-left: 15px
+    &__target
+      height: 16px
+
+@media (max-width: 1200px)
+  .header
+    &__link
+      font-size: 14px
+
+@media (max-width: 900px)
+  .header
+    &__menu
+      position: absolute
+      right: 0
+      top: 100%
+      flex-direction: column
+      z-index: 999
+      align-items: flex-end
+      padding: 10px 0
+      background: #fff
+      box-shadow: rgba(0, 0, 0, 0.1) -5px 5px 5px
+    &__link
+      margin: 0
+      padding: 10px 15px
+      justify-content: flex-end
+      &:hover, &.active
+        background: $yellow
+    &__target
+      display: none
