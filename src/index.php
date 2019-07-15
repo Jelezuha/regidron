@@ -4,6 +4,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <title><?php echo $title ?></title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
